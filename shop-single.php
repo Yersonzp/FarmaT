@@ -87,7 +87,7 @@ if (isset($_POST['add_to_cart'])) {
                         <a href="#" class="icons-btn d-inline-block js-search-open"><span class="icon-search"></span></a>
                         <a href="carrito.php" class="icons-btn d-inline-block bag">
                             <span class="icon-shopping-bag"></span>
-                            <span class="number">2</span>
+                            <span class="number"><?php echo count($cartProducts); ?></span>
                         </a>
                         <a href="#" class="site-menu-toggle js-menu-toggle ml-3 d-inline-block d-lg-none"><span class="icon-menu"></span></a>
                     </div>

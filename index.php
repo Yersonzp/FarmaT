@@ -35,7 +35,7 @@
         <div class="container">
           <a href="#" class="search-close js-search-close"><span class="icon-close2"></span></a>
           <form action="#" method="post">
-            <input type="text" class="form-control" placeholder="Search keyword and hit enter...">
+            <input type="text" class="form-control" placeholder="Busca la palabra clave y pulsa enter...">
           </form>
         </div>
       </div>
@@ -44,21 +44,23 @@
         <div class="d-flex align-items-center justify-content-between">
           <div class="logo">
             <div class="site-logo">
-              <a href="index.php" class="js-logo-clone"><strong class="text-primary">FARMA</strong>T</a>
+              <a href="index.php" class="js-logo-clone"><strong class="text-primary">FAR</strong>MAT</a>
             </div>
           </div>
           <div class="main-nav d-none d-lg-block">
             <nav class="site-navigation text-right text-md-center" role="navigation">
               <ul class="site-menu js-clone-nav d-none d-lg-block">
                 <li class="active"><a href="index.php">Inicio</a></li>
-                <li><a href="shop.php">Comprar</a></li>
+                <li><a href="shop.php">Catalogo</a></li>
                 <li class="has-children">
                   <a href="#">Productos</a>
                   <ul class="dropdown">
-                    <li><a href="#">Supplements</a></li>
+                    <li><a href="#">Suplementos</a></li>
                     <li ><a href="#">Vitaminas</a></li>
+                    <li ><a href="#">Cuidado del bebe</a></li>
+                    <li ><a href="#">Cuidado personal</a></li>
                     <li><a href="#">Dieta &amp; Nutricion</a></li>
-                    <li><a href="#">Te &amp; Coffee</a></li>
+                    <li><a href="#">Otros</a></li>
                     
                   </ul>
                 </li>
@@ -71,10 +73,9 @@
             <a href="#" class="icons-btn d-inline-block js-search-open"><span class="icon-search"></span></a>
             <a href="carrito.php" class="icons-btn d-inline-block bag">
               <span class="icon-shopping-bag"></span>
-              <span class="number">2</span>
+              <span class="number"><?php echo count($cartProducts); ?></span>
             </a>
-            <a href="#" class="site-menu-toggle js-menu-toggle ml-3 d-inline-block d-lg-none"><span
-                class="icon-menu"></span></a>
+            <a href="#" class="site-menu-toggle js-menu-toggle ml-3 d-inline-block d-lg-none"><span class="icon-menu"></span></a>
           </div>
         </div>
       </div>
@@ -87,11 +88,11 @@
           <div class="row">
             <div class="col-lg-12 mx-auto align-self-center">
               <div class="site-block-cover-content text-center">
-                <h1 class="mb-0"><strong class="text-primary">FarmaT</strong> Abre las 24 Horas</h1>
+                <h1 class="mb-0"><strong class="text-primary">FARMAT</strong> ABIERTO LAS 24 HORAS</h1>
 
                 <div class="row justify-content-center mb-5">
                   <div class="col-lg-6 text-center">
-                    <p>Para que puedas comprar tu propias medicinas mas rapido y facil .</p>
+                    <p>SIEMPRE AL PENDIENTE DE SU CUIDADO</p>
                   </div>
                 </div>
               </div>
@@ -105,10 +106,10 @@
           <div class="row">
             <div class="col-lg-12 mx-auto align-self-center">
               <div class="site-block-cover-content text-center">
-                <h1 class="mb-0">Nueva Medicina <strong class="text-primary">Todos los Dia</strong></h1>
+                <h1 class="mb-0">¡TU SALUD ES NUESTRA <strong class="text-primary">PRIORIDAD!</strong></h1>
                 <div class="row justify-content-center mb-5">
                   <div class="col-lg-6 text-center">
-                    <p>Ingresamos nuevas medidicinas todos los dias para que puedas obtener tus medicinas .</p>
+                    <p>Descubre una experiencia de compra única en nuestra farmacia.</p>
                   </div>
                 </div>
               </div>
@@ -127,8 +128,10 @@
           <div class="col-lg-4">
             <div class="feature">
               <span class="wrap-icon flaticon-24-hours-drugs-delivery"></span>
-              <h3><a href="#">Entrega gratuita</a></h3>
-              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Culpa laborum voluptates excepturi neque labore .</p>
+              <h3><a href="#">ENVIOS 24/7</a></h3>
+              <p>¡En nuestra farmacia, tu bienestar no tiene horario! Ofrecemos envíos 24/7 para que recibas tus
+                medicamentos y productos de salud en cualquier momento del día. Compra en línea y disfruta de la
+                comodidad y rapidez de nuestro servicio de entrega continua.</p>
               <p><a href="#" class="d-flex align-items-center"><span class="mr-2">Learn more</span> <span class="icon-keyboard_arrow_right"></span></a></p>
             </div>
           </div>
@@ -143,8 +146,11 @@
           <div class="col-lg-4">
             <div class="feature">
               <span class="wrap-icon flaticon-test-tubes"></span>
-              <h3><a href="#">Medicamentos garantizados</a></h3>
-              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Culpa laborum voluptates excepturi neque labore .</p>
+              <h3><a href="#">CALIDAD GARANTIZADA</a></h3>
+              <p>Nuestra farmacia se compromete a garantizar la calidad de sus medicamentos en cada etapa, desde el
+                almacenamiento hasta la entrega. Trabajamos con proveedores confiables y seguimos estrictos estándares
+                de calidad para asegurarnos de que cada producto que ofrecemos cumpla con los más altos estándares de
+                seguridad y eficacia.</p>
               <p><a href="#" class="d-flex align-items-center"><span class="mr-2">Learn more</span> <span class="icon-keyboard_arrow_right"></span></a></p>
             </div>
           </div>
@@ -157,7 +163,7 @@
       <div class="container">
         <div class="row">
           <div class="title-section text-center col-12">
-            <h2>Productos de <strong class="text-primary">FarmaT</strong></h2>
+            <h2>Nuestros <strong class="text-primary">Productos</strong></h2>
           </div>
         </div>
         <div class="row">
