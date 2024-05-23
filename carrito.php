@@ -1,6 +1,6 @@
 <?php
 include('php/config.php');
-include('php/functions.php');
+include('php/funtions.php');
 
 // Obtener el ID del usuario. Aquí está establecido manualmente como ejemplo.
 $userId = 1;
