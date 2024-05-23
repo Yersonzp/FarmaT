@@ -85,7 +85,7 @@ if (isset($_POST['add_to_cart'])) {
                     </div>
                     <div class="icons">
                         <a href="#" class="icons-btn d-inline-block js-search-open"><span class="icon-search"></span></a>
-                        <a href="cart.html" class="icons-btn d-inline-block bag">
+                        <a href="carrito.php" class="icons-btn d-inline-block bag">
                             <span class="icon-shopping-bag"></span>
                             <span class="number">2</span>
                         </a>
@@ -104,40 +104,41 @@ if (isset($_POST['add_to_cart'])) {
         </div>
 
         <div class="site-section">
-    <div class="container">
-        <div class="row">
-            <div class="col-md-5 mr-auto">
-                <div class="border text-center">
-                    <img src="images/<?php echo $productos['imagen']; ?>" alt="Image" class="img-fluid p-5">
-                </div>
-            </div>
-            <div class="col-md-6">
-                <h2 class="text-black"><?php echo $productos['nombre']; ?></h2> 
-                <p><?php echo $productos['descripcion']; ?></p> 
-                <p><del>$<?php echo $productos['precio']; ?></del> 
-                
-                <!-- Aquí se agrega la sección de incremento y decremento de cantidad -->
-                <div class="mb-5">
-                    <div class="input-group mb-3" style="max-width: 220px;">
-                        <div class="input-group-prepend">
-                            <button class="btn btn-outline-primary js-btn-minus" type="button">&minus;</button>
-                        </div>
-                        <input type="text" class="form-control text-center" value="1" placeholder="" aria-label="Example text with button addon" aria-describedby="button-addon1">
-                        <div class="input-group-append">
-                            <button class="btn btn-outline-primary js-btn-plus" type="button">&plus;</button>
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-5 mr-auto">
+                        <div class="border text-center">
+                            <img src="images/<?php echo $productos['imagen']; ?>" alt="Image" class="img-fluid p-5">
                         </div>
                     </div>
+                    <div class="col-md-6">
+                        <h2 class="text-black"><?php echo $productos['nombre']; ?></h2> 
+                        <p><?php echo $productos['descripcion']; ?></p> 
+                        <p><del>$<?php echo $productos['precio']; ?></del></p>
+                        
+                        <!-- Aquí se agrega la sección de incremento y decremento de cantidad -->
+                        <div class="mb-5">
+                            <div class="input-group mb-3" style="max-width: 220px;">
+                                <div class="input-group-prepend">
+                                    <button class="btn btn-outline-primary js-btn-minus" type="button">&minus;</button>
+                                </div>
+                                <input type="text" class="form-control text-center" value="1" placeholder="" aria-label="Example text with button addon" aria-describedby="button-addon1">
+                                <div class="input-group-append">
+                                    <button class="btn btn-outline-primary js-btn-plus" type="button">&plus;</button>
+                                </div>
+                            </div>
+                        </div>
+                        <form action="shop-single.php?id=<?php echo $product_id; ?>" method="post">
+                            <input type="hidden" name="product_id" value="<?php echo $productos['id']; ?>">
+                            <button type="submit" name="add_to_cart" class="buy-now btn btn-sm height-auto px-4 py-3 btn-primary">Añadir al carro</button>
+                        </form>
+                        <?php if ($message): ?>
+                            <p><?php echo $message; ?></p>
+                        <?php endif; ?>
+                    </div>
                 </div>
-                <form action="cart.php" method="post">
-                <input type="hidden" name="product_id" value="<?php echo $productos['id']; ?>">
-                <button type="submit" name="add_to_cart" class="buy-now btn btn-sm height-auto px-4 py-3 btn-primary">Añadir al carro</button>
-                </form>
-
             </div>
         </div>
-    </div>
-</div>
-
 
         <footer class="site-footer bg-light">
             <div class="container">

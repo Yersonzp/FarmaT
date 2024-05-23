@@ -1,24 +1,3 @@
-// En addToCart.php
-
-<?php
-include('php/config.php');
-include('php/funtions.php');
-
-// Obtener el ID del producto enviado desde el formulario
-$productId = $_POST['product_id'];
-// El ID del usuario debería ser obtenido de tu sistema de autenticación
-$userId = 1; // Aquí lo he establecido manualmente como ejemplo
-
-// Agregar el producto al carrito
-$message = addToCart($conn, $productId, $userId);
-
-// Redireccionar de vuelta a la página del producto con un mensaje
-header("Location: product-details.php?id=$productId&message=$message");
-exit();
-$userId = 1; // Supongamos que el usuario actual tiene el ID 1, debes modificar esto según tu sistema de autenticación
-
-
-?>
 
 <!DOCTYPE html>
 <html lang="en">
@@ -65,13 +44,13 @@ $userId = 1; // Supongamos que el usuario actual tiene el ID 1, debes modificar 
         <div class="d-flex align-items-center justify-content-between">
           <div class="logo">
             <div class="site-logo">
-              <a href="index.html" class="js-logo-clone"><strong class="text-primary">Farma</strong>T</a>
+              <a href="index.php" class="js-logo-clone"><strong class="text-primary">Farma</strong>T</a>
             </div>
           </div>
           <div class="main-nav d-none d-lg-block">
             <nav class="site-navigation text-right text-md-center" role="navigation">
               <ul class="site-menu js-clone-nav d-none d-lg-block">
-                <li><a href="index.html">Inicio</a></li>
+                <li><a href="index.php">Inicio</a></li>
                 <li class="active"><a href="shop.html">Comprar</a></li>
                 <li class="has-children">
                   <a href="#">Productos</a>
@@ -91,7 +70,7 @@ $userId = 1; // Supongamos que el usuario actual tiene el ID 1, debes modificar 
           </div>
           <div class="icons">
             <a href="#" class="icons-btn d-inline-block js-search-open"><span class="icon-search"></span></a>
-            <a href="cart.html" class="icons-btn d-inline-block bag">
+            <a href="carrito.php" class="icons-btn d-inline-block bag">
               <span class="icon-shopping-bag"></span>
               <span class="number">2</span>
             </a>
@@ -106,7 +85,7 @@ $userId = 1; // Supongamos que el usuario actual tiene el ID 1, debes modificar 
       <div class="container">
         <div class="row">
           <div class="col-md-12 mb-0">
-            <a href="index.html">inicio</a> <span class="mx-2 mb-0">/</span> 
+            <a href="index.php">inicio</a> <span class="mx-2 mb-0">/</span> 
             <strong class="text-black">Carrito</strong>
           </div>
         </div>
