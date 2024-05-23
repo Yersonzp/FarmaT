@@ -2,6 +2,17 @@
 include('php/config.php');
 include('php/funtions.php');
 
+
+session_start();
+
+$user_id = isset($_SESSION['user_id']) ? $_SESSION['user_id'] : null;
+
+if ($user_id) {
+    $cartProducts = getCartProducts($conn, $user_id);
+} else {
+    $cartProducts = [];
+}
+
 // Obtener el ID del producto desde la URL
 $product_id = isset($_GET['id']) ? (int)$_GET['id'] : 0;
 

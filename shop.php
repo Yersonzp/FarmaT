@@ -1,4 +1,17 @@
-<?php include 'php/config.php'; ?>
+<?php
+include 'php/config.php';
+include 'php/funtions.php';
+
+session_start();
+
+$user_id = isset($_SESSION['user_id']) ? $_SESSION['user_id'] : null;
+
+if ($user_id) {
+    $cartProducts = getCartProducts($conn, $user_id);
+} else {
+    $cartProducts = [];
+}
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -28,7 +41,7 @@
         <div class="container">
           <a href="#" class="search-close js-search-close"><span class="icon-close2"></span></a>
           <form action="#" method="post">
-            <input type="text" class="form-control" placeholder="Search keyword and hit enter...">
+            <input type="text" class="form-control" placeholder="Busca la palabra clave y pulsa enter...">
           </form>
         </div>
       </div>
@@ -37,16 +50,15 @@
         <div class="d-flex align-items-center justify-content-between">
           <div class="logo">
             <div class="site-logo">
-              <a href="index.php" class="js-logo-clone"><strong class="text-primary">Farma</strong>T</a>
+              <a href="index.php" class="js-logo-clone"><strong class="text-primary">FAR</strong>MAT</a>
             </div>
           </div>
           <div class="main-nav d-none d-lg-block">
             <nav class="site-navigation text-right text-md-center" role="navigation">
               <ul class="site-menu js-clone-nav d-none d-lg-block">
                 <li><a href="index.php">Inicio</a></li>
-                <li class="active"><a href="shop.php">Comprar</a></li>
+                <li class="active"><a href="shop.php">Catalogo</a></li>
                 <li class="has-children">
-                  <a href="#">Productos</a>
                   <ul class="dropdown">
                     <li><a href="#">Suplementacion</a></li>
                     <li class="has-children">
@@ -62,7 +74,7 @@
           </div>
           <div class="icons">
             <a href="#" class="icons-btn d-inline-block js-search-open"><span class="icon-search"></span></a>
-            <a href="cart.html" class="icons-btn d-inline-block bag">
+            <a href="carrito.php" class="icons-btn d-inline-block bag">
               <span class="icon-shopping-bag"></span>
               <span class="number"><?php echo count($cartProducts); ?></span>
             </a>

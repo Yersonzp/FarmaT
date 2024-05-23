@@ -2,8 +2,14 @@
 include('php/config.php');
 include('php/funtions.php');
 
-// Obtener el ID del usuario. Aquí está establecido manualmente como ejemplo.
-$userId = 1;
+// Obtener el ID del usuario desde la sesión.
+if (isset($_SESSION['user_id'])) {
+    $userId = $_SESSION['user_id'];
+} else {
+    // Si no hay un usuario en la sesión, redirigir al inicio de sesión o manejar el error.
+    header("Location: login.php");
+    exit();
+}
 
 // Eliminar producto si se recibe la solicitud.
 if (isset($_GET['remove_product_id'])) {

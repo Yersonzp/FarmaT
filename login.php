@@ -1,3 +1,44 @@
+<?php
+include 'php/config.php';
+session_start();
+
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
+    $email = $_POST['email'];
+    $password = $_POST['password'];
+
+    $sql = "SELECT id, password, activated FROM usuarios WHERE email = ?";
+    $stmt = $conn->prepare($sql);
+    $stmt->bind_param("s", $email);
+    $stmt->execute();
+    $stmt->store_result();
+
+    if ($stmt->num_rows > 0) {
+        $stmt->bind_result($user_id, $hashed_password, $activated);
+        $stmt->fetch();
+
+        if ($activated == 1) {
+            if (password_verify($password, $hashed_password)) {
+                $_SESSION['user_id'] = $user_id;
+                $_SESSION['email'] = $email;
+                header("Location: index.php");
+                exit();
+            } else {
+                echo "Contraseña incorrecta.";
+            }
+        } else {
+            echo "Cuenta no activada. Por favor, revisa tu correo para activar tu cuenta.";
+        }
+    } else {
+        echo "Correo electrónico no encontrado.";
+    }
+
+    $stmt->close();
+    $conn->close();
+}
+?>
+
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
