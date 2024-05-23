@@ -57,4 +57,37 @@ function getProductById($conn, $product_id) {
     return $result->fetch_assoc();
 }
 
+// Función para obtener productos del carrito
+function getCartProducts($conn, $userId) {
+    $sql = "SELECT c.product_id, c.quantity, p.nombre, p.precio, p.imagen
+            FROM carrito c
+            JOIN productos p ON c.product_id = p.id
+            WHERE c.user_id = ?";
+    $stmt = $conn->prepare($sql);
+    $stmt->bind_param("i", $userId);
+    $stmt->execute();
+    $result = $stmt->get_result();
+    $products = [];
+    while ($row = $result->fetch_assoc()) {
+        $products[] = $row;
+    }
+    return $products;
+}
+
+//Funcion para calcular el total del producto
+function updateCartQuantity($conn, $userId, $productId, $quantity) {
+    $sql = "UPDATE carrito SET quantity = ? WHERE user_id = ? AND product_id = ?";
+    $stmt = $conn->prepare($sql);
+    $stmt->bind_param("iii", $quantity, $userId, $productId);
+    $stmt->execute();
+}
+
+//Funcion para remover un producto del carrito
+function removeFromCart($conn, $userId, $productId) {
+    $sql = "DELETE FROM carrito WHERE user_id = ? AND product_id = ?";
+    $stmt = $conn->prepare($sql);
+    $stmt->bind_param("ii", $userId, $productId);
+    $stmt->execute();
+}
+
 ?>
