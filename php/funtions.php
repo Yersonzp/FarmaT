@@ -90,4 +90,19 @@ function removeFromCart($conn, $userId, $productId) {
     $stmt->execute();
 }
 
+//Funcion para optener el nombre del usuario y que salga en el index etc.
+function getUserName($conn, $user_id) {
+    $stmt = $conn->prepare("SELECT username FROM usuarios WHERE id = ?");
+    $stmt->bind_param("i", $user_id);
+    $stmt->execute();
+    $result = $stmt->get_result();
+    if ($result->num_rows > 0) {
+        $row = $result->fetch_assoc();
+        return $row['username'];
+    } else {
+        return null;
+    }
+}
+
+
 ?>

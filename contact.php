@@ -80,6 +80,12 @@
               <span class="icon-shopping-bag"></span>
               <span class="number"><?php echo count($cartProducts); ?></span>
             </a>
+            <?php if ($user_id): ?>
+              <a href="#" class="icons-btn d-inline-block">Perfil</a>
+              <a href="logout.php" class="icons-btn d-inline-block">Cerrar Sesión</a>
+            <?php else: ?>
+              <a href="login.php" class="icons-btn d-inline-block">Iniciar Sesión</a>
+            <?php endif; ?>
             <a href="#" class="site-menu-toggle js-menu-toggle ml-3 d-inline-block d-lg-none"><span
                 class="icon-menu"></span></a>
           </div>

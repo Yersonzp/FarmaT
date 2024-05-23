@@ -14,6 +14,20 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $password = password_hash($_POST['password'], PASSWORD_BCRYPT);
     $activation_code = md5($email . time());
 
+     // Verificar si el correo electrónico ya está registrado
+     $sql = "SELECT * FROM usuarios WHERE email = ?";
+     $stmt = $conn->prepare($sql);
+     $stmt->bind_param("s", $email);
+     $stmt->execute();
+     $result = $stmt->get_result();
+ 
+     if ($result->num_rows > 0) {
+         echo json_encode(["status" => "error", "message" => "Este correo ya está registrado. Por favor, usa uno diferente."]);
+         $stmt->close();
+         $conn->close();
+         exit();
+     }
+
     // Insertar el nuevo usuario en la base de datos
     $sql = "INSERT INTO usuarios (username, email, birthdate, password, activation_code, activated) VALUES (?, ?, ?, ?, ?, 0)";
     $stmt = $conn->prepare($sql);
@@ -21,13 +35,13 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
     if ($stmt->execute()) {
         // Enviar el correo de activación usando PHPMailer
-        $activation_link = "http://localhost/FarmaT/activate.php?code=$activation_code";
+        $activation_link = "http://localhost/FarmaT/php/activate.php?code=$activation_code";
 
         $mail = new PHPMailer(true);
         try {
             // Configuración del servidor SMTP
             $mail->isSMTP();
-            $mail->Host       = 'smtp-relay.gmail.com'; // Cambia esto si usas otro servidor SMTP
+            $mail->Host       = 'smtp.gmail.com'; // Cambia esto si usas otro servidor SMTP
             $mail->SMTPAuth   = true;
             $mail->Username   = 'farmat373@gmail.com'; // Tu correo de Gmail
             $mail->Password   = 'gihy kgyz vxwb oxub'; // Contraseña de la app de Gmail
@@ -59,7 +73,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 ?>
 
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -67,34 +81,35 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
   <link rel="stylesheet" href="css/registro.css">
 </head>
 <body>
-    <div class="container">
-      <div class="logo-container">
-        <img src="ruta-a-tu-logo.png" alt="Logo" class="logo">
-      </div>
-      <h2>Registro de Usuario</h2>
-      <form id="registration-form" action="registro.php" method="POST">
-        <div class="form-group">
-          <label for="username">Nombre de Usuario:</label>
-          <input type="text" id="username" name="username" required>
-        </div>
-        <div class="form-group">
-          <label for="email">Correo Electrónico:</label>
-          <input type="email" id="email" name="email" required>
-        </div>
-        <div class="form-group">
-          <label for="birthdate">Fecha de Nacimiento:</label>
-          <input type="date" id="birthdate" name="birthdate" required>
-        </div>
-        <div class="form-group">
-          <label for="password">Contraseña:</label>
-          <input type="password" id="password" name="password" required>
-          <div id="password-strength"></div>
-        </div>
-        <button type="submit">Registrarse</button>
-      </form>
-      <p>Si ya tienes una cuenta, <a href="login.php">inicia sesión aquí</a>.</p>
+  <div class="container">
+    <div class="logo-container">
+      <img src="ruta-a-tu-logo.png" alt="Logo" class="logo">
     </div>
+    <h2>Registro de Usuario</h2>
+    <form id="registration-form" action="registro.php" method="POST">
+      <div class="form-group">
+        <label for="username">Nombre de Usuario:</label>
+        <input type="text" id="username" name="username" required>
+      </div>
+      <div class="form-group">
+        <label for="email">Correo Electrónico:</label>
+        <input type="email" id="email" name="email" required>
+      </div>
+      <div class="form-group">
+        <label for="birthdate">Fecha de Nacimiento:</label>
+        <input type="date" id="birthdate" name="birthdate" required>
+      </div>
+      <div class="form-group">
+        <label for="password">Contraseña:</label>
+        <input type="password" id="password" name="password" required>
+        <div id="password-strength"></div> <!-- ID para el indicador de fuerza de la contraseña -->
+      </div>
+      <button type="submit">Registrarse</button>
+    </form>
+    <p>Si ya tienes una cuenta, <a href="login.php">inicia sesión aquí</a>.</p>
+  </div>
   <script src="registro.js"></script>
 </body>
 </html>
+
 

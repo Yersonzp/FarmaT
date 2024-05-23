@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 22-05-2024 a las 20:33:51
+-- Tiempo de generación: 24-05-2024 a las 01:30:36
 -- Versión del servidor: 10.4.32-MariaDB
 -- Versión de PHP: 8.2.12
 
@@ -29,11 +29,21 @@ SET time_zone = "+00:00";
 
 CREATE TABLE `carrito` (
   `id` int(11) NOT NULL,
-  `id_usuario` int(11) NOT NULL,
-  `id_producto` int(11) NOT NULL,
-  `cantidad` int(11) NOT NULL,
-  `total` decimal(10,2) NOT NULL
+  `user_id` int(11) NOT NULL,
+  `product_id` int(11) NOT NULL,
+  `quantity` int(11) NOT NULL DEFAULT 1,
+  `added_on` timestamp NOT NULL DEFAULT current_timestamp()
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Volcado de datos para la tabla `carrito`
+--
+
+INSERT INTO `carrito` (`id`, `user_id`, `product_id`, `quantity`, `added_on`) VALUES
+(7, 1, 3, 3, '2024-05-23 16:22:18'),
+(8, 1, 5, 1, '2024-05-23 16:34:45'),
+(9, 1, 2, 2, '2024-05-23 17:37:17'),
+(10, 4, 1, 3, '2024-05-23 23:17:01');
 
 -- --------------------------------------------------------
 
@@ -84,9 +94,19 @@ CREATE TABLE `usuarios` (
   `id` int(11) NOT NULL,
   `username` varchar(50) NOT NULL,
   `email` varchar(100) NOT NULL,
+  `birthdate` date NOT NULL,
   `password` varchar(255) NOT NULL,
+  `activation_code` varchar(255) NOT NULL,
+  `activated` tinyint(1) DEFAULT 0,
   `created_at` timestamp NOT NULL DEFAULT current_timestamp()
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Volcado de datos para la tabla `usuarios`
+--
+
+INSERT INTO `usuarios` (`id`, `username`, `email`, `birthdate`, `password`, `activation_code`, `activated`, `created_at`) VALUES
+(4, 'yerson', 'yersonjr78@gmail.com', '2024-05-23', '$2y$10$si.KW0xhYprYnwD2IBgtiOtTiZwWNgBffEcXQ4kikQEOOSM82ada.', 'e8c18a3d657ca336b43be2bf4adab0b4', 1, '2024-05-23 21:23:19');
 
 --
 -- Índices para tablas volcadas
@@ -97,7 +117,8 @@ CREATE TABLE `usuarios` (
 --
 ALTER TABLE `carrito`
   ADD PRIMARY KEY (`id`),
-  ADD KEY `id_producto` (`id_producto`);
+  ADD KEY `product_id` (`product_id`),
+  ADD KEY `user_id` (`user_id`);
 
 --
 -- Indices de la tabla `password_reset_tokens`
@@ -126,7 +147,7 @@ ALTER TABLE `usuarios`
 -- AUTO_INCREMENT de la tabla `carrito`
 --
 ALTER TABLE `carrito`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
 
 --
 -- AUTO_INCREMENT de la tabla `password_reset_tokens`
@@ -144,17 +165,11 @@ ALTER TABLE `productos`
 -- AUTO_INCREMENT de la tabla `usuarios`
 --
 ALTER TABLE `usuarios`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 
 --
 -- Restricciones para tablas volcadas
 --
-
---
--- Filtros para la tabla `carrito`
---
-ALTER TABLE `carrito`
-  ADD CONSTRAINT `carrito_ibfk_1` FOREIGN KEY (`id_producto`) REFERENCES `productos` (`id`);
 
 --
 -- Filtros para la tabla `password_reset_tokens`

@@ -2,13 +2,13 @@
 include('php/config.php');
 include('php/funtions.php');
 
-
 session_start();
 
 $user_id = isset($_SESSION['user_id']) ? $_SESSION['user_id'] : null;
 
 if ($user_id) {
     $cartProducts = getCartProducts($conn, $user_id);
+    $user_name = getUserName($conn, $user_id); // Asegúrate de tener esta función para obtener el nombre del usuario.
 } else {
     $cartProducts = [];
 }
@@ -24,19 +24,21 @@ $message = '';
 
 // Verificar si se ha enviado una solicitud para agregar un producto al carrito
 if (isset($_POST['add_to_cart'])) {
-    // Obtener el ID del producto enviado desde el formulario
+    //optener id del producto
     $productId = $_POST['product_id'];
-    // El ID del usuario debería ser obtenido de tu sistema de autenticación
-    $userId = 1; // Aquí lo he establecido manualmente como ejemplo
-    
-    // Agregar el producto al carrito
-    $message = addToCart($conn, $productId, $userId);
+    //optener el usuario
+    $userId = $user_id;
+
+    if ($userId) {
+        $message = addToCart($conn, $productId, $userId);
+    } else {
+        $message = 'Debes estar logueado para agregar productos al carrito.';
+    }
 }
 ?>
 
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <title>Pharmative &mdash; Colorlib Template</title>
     <meta charset="utf-8">
@@ -53,16 +55,14 @@ if (isset($_POST['add_to_cart'])) {
     <link rel="stylesheet" href="css/aos.css">
     <link rel="stylesheet" href="css/style.css">
 </head>
-
 <body>
-
     <div class="site-wrap">
         <div class="site-navbar py-2">
             <div class="search-wrap">
                 <div class="container">
                     <a href="#" class="search-close js-search-close"><span class="icon-close2"></span></a>
                     <form action="#" method="post">
-                        <input type="text" class="form-control" placeholder="Search keyword and hit enter...">
+                        <input type="text" class="form-control" placeholder="Busca la palabra clave y pulsa enter...">
                     </form>
                 </div>
             </div>
@@ -83,8 +83,7 @@ if (isset($_POST['add_to_cart'])) {
                                     <a href="#">Productos</a>
                                     <ul class="dropdown">
                                         <li><a href="#">Suplementacion</a></li>
-                                        <li class="has-children">
-                                            <li><a href="#">Vitaminas</a></li>
+                                        <li><a href="#">Vitaminas</a></li>
                                         <li><a href="#">Dieta &amp; Nutricion</a></li>
                                         <li><a href="#">Te &amp; Coffee</a></li>
                                     </ul>
@@ -100,6 +99,14 @@ if (isset($_POST['add_to_cart'])) {
                             <span class="icon-shopping-bag"></span>
                             <span class="number"><?php echo count($cartProducts); ?></span>
                         </a>
+                        <div class="user-buttons">
+                            <?php if ($user_id): ?>
+                                <a href="#" class="icons-btn d-inline-block"><span class="icon-user"></span> <?php echo htmlspecialchars($user_name); ?></a>
+                                <a href="logout.php" class="icons-btn d-inline-block"><span class="icon-sign-out"></span> Logout</a>
+                            <?php else: ?>
+                                <a href="login.php" class="icons-btn d-inline-block"><span class="icon-user"></span> Login</a>
+                            <?php endif; ?>
+                        </div>
                         <a href="#" class="site-menu-toggle js-menu-toggle ml-3 d-inline-block d-lg-none"><span class="icon-menu"></span></a>
                     </div>
                 </div>
@@ -127,7 +134,6 @@ if (isset($_POST['add_to_cart'])) {
                         <p><?php echo $productos['descripcion']; ?></p> 
                         <p><del>$<?php echo $productos['precio']; ?></del></p>
                         
-                        <!-- Aquí se agrega la sección de incremento y decremento de cantidad -->
                         <div class="mb-5">
                             <div class="input-group mb-3" style="max-width: 220px;">
                                 <div class="input-group-prepend">
@@ -175,8 +181,8 @@ if (isset($_POST['add_to_cart'])) {
                             <h3 class="footer-heading mb-4">Contacto de Informacion</h3>
                             <ul class="list-unstyled">
                                 <li class="address">203 Fake St. Mountain View, San Francisco, Cartagena</li>
-                                <li class="phone"><a href="tel://3215714647">+3217514647</a></li>
-                                <li class="email">yeimerballesta@gmail.com</li>
+                                <li class="phone"><a href="tel://23923929210">+2 392 3929 210</a></li>
+                                <li class="email">emailaddress@domain.com</li>
                             </ul>
                         </div>
                     </div>
@@ -184,7 +190,7 @@ if (isset($_POST['add_to_cart'])) {
             </div>
         </footer>
     </div>
-
+    
     <script src="js/jquery-3.3.1.min.js"></script>
     <script src="js/jquery-ui.js"></script>
     <script src="js/popper.min.js"></script>
@@ -193,6 +199,5 @@ if (isset($_POST['add_to_cart'])) {
     <script src="js/jquery.magnific-popup.min.js"></script>
     <script src="js/aos.js"></script>
     <script src="js/main.js"></script>
-
 </body>
 </html>

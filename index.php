@@ -8,6 +8,7 @@ $user_id = isset($_SESSION['user_id']) ? $_SESSION['user_id'] : null;
 
 if ($user_id) {
     $cartProducts = getCartProducts($conn, $user_id);
+    $user_name = getUserName($conn, $user_id); // Asegúrate de tener esta función para obtener el nombre del usuario.
 } else {
     $cartProducts = [];
 }
@@ -76,12 +77,19 @@ if ($user_id) {
               <span class="icon-shopping-bag"></span>
               <span class="number"><?php echo count($cartProducts); ?></span>
             </a>
+            <div class="user-buttons">
+              <?php if ($user_id): ?>
+                <a href="#" class="icons-btn d-inline-block"><span class="icon-user"></span> <?php echo htmlspecialchars($user_name); ?></a>
+                <a href="logout.php" class="icons-btn d-inline-block"><span class="icon-sign-out"></span> Logout</a>
+              <?php else: ?>
+                <a href="login.php" class="icons-btn d-inline-block"><span class="icon-user"></span> Login</a>
+              <?php endif; ?>
+            </div>
             <a href="#" class="site-menu-toggle js-menu-toggle ml-3 d-inline-block d-lg-none"><span class="icon-menu"></span></a>
           </div>
         </div>
       </div>
     </div>
-  
     <div class="owl-carousel owl-single px-0">
       <div class="site-blocks-cover overlay" style="background-image: url('images/hero_bg.jpg');">
         <div class="container">
