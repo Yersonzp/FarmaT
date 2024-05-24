@@ -8,7 +8,7 @@ $user_id = isset($_SESSION['user_id']) ? $_SESSION['user_id'] : null;
 
 if ($user_id) {
     $cartProducts = getCartProducts($conn, $user_id);
-    $user_name = getUserName($conn, $user_id); // Asegúrate de tener esta función para obtener el nombre del usuario.
+    $user_name = getUserName($conn, $user_id); // función para obtener el nombre del usuario.
 } else {
     $cartProducts = [];
 }

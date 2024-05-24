@@ -1,32 +1,32 @@
 <?php
-include('php/config.php');
-include('php/funtions.php');
+include 'php/config.php';
+include 'php/funtions.php';
 
-// Obtener el ID del usuario desde la sesión.
-if (isset($_SESSION['user_id'])) {
-    $userId = $_SESSION['user_id'];
-} else {
-    // Si no hay un usuario en la sesión, redirigir al inicio de sesión o manejar el error.
+session_start(); // Asegúrate de que la sesión se inicie al principio del archivo
+
+// Verifica si el usuario está autenticado
+$user_id = isset($_SESSION['user_id']) ? $_SESSION['user_id'] : null;
+
+// Si el usuario no está autenticado, redirige al formulario de inicio de sesión
+if (!$user_id) {
     header("Location: login.php");
     exit();
 }
-
-// Eliminar producto si se recibe la solicitud.
-if (isset($_GET['remove_product_id'])) {
-    $productId = $_GET['remove_product_id'];
-    removeFromCart($conn, $userId, $productId);
-    // Redirigir de nuevo al carrito para evitar resubmission.
-    header("Location: carrito.php");
-    exit();
-}
-
-// Obtener productos en el carrito para el usuario actual.
-$cartProducts = getCartProducts($conn, $userId);
+// Obtener los productos del carrito para el usuario autenticado.
+$cartProducts = getCartProducts($conn, $user_id);
 
 // Calcular el total del carrito.
 $cartTotal = 0;
 foreach ($cartProducts as $product) {
     $cartTotal += $product['precio'] * $product['quantity'];
+}
+
+// Manejar la eliminación del producto
+if (isset($_GET['remove_product_id'])) {
+    $product_id = $_GET['remove_product_id'];
+    removeFromCart($conn, $user_id, $product_id);
+    header("Location: carrito.php");
+    exit();
 }
 
 // Verificar si se ha enviado una solicitud para actualizar el carrito.
