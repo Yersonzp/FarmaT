@@ -43,7 +43,7 @@
         <div class="d-flex align-items-center justify-content-between">
           <div class="logo">
             <div class="site-logo">
-              <a href="index.php" class="js-logo-clone"><strong class="text-primary">FarmaT</strong></a>
+              <a href="index.php" class="js-logo-clone"><strong class="text-primary">FAR</strong>MAT</a>
             </div>
           </div>
           <div class="main-nav d-none d-lg-block">
