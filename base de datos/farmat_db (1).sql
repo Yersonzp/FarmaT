@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 24-05-2024 a las 01:30:36
+-- Tiempo de generación: 24-05-2024 a las 06:13:50
 -- Versión del servidor: 10.4.32-MariaDB
 -- Versión de PHP: 8.2.12
 
@@ -43,7 +43,7 @@ INSERT INTO `carrito` (`id`, `user_id`, `product_id`, `quantity`, `added_on`) VA
 (7, 1, 3, 3, '2024-05-23 16:22:18'),
 (8, 1, 5, 1, '2024-05-23 16:34:45'),
 (9, 1, 2, 2, '2024-05-23 17:37:17'),
-(10, 4, 1, 3, '2024-05-23 23:17:01');
+(12, 4, 3, 1, '2024-05-24 00:36:07');
 
 -- --------------------------------------------------------
 
@@ -98,15 +98,31 @@ CREATE TABLE `usuarios` (
   `password` varchar(255) NOT NULL,
   `activation_code` varchar(255) NOT NULL,
   `activated` tinyint(1) DEFAULT 0,
-  `created_at` timestamp NOT NULL DEFAULT current_timestamp()
+  `created_at` timestamp NOT NULL DEFAULT current_timestamp(),
+  `role` enum('admin','user') DEFAULT 'user'
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
 -- Volcado de datos para la tabla `usuarios`
 --
 
-INSERT INTO `usuarios` (`id`, `username`, `email`, `birthdate`, `password`, `activation_code`, `activated`, `created_at`) VALUES
-(4, 'yerson', 'yersonjr78@gmail.com', '2024-05-23', '$2y$10$si.KW0xhYprYnwD2IBgtiOtTiZwWNgBffEcXQ4kikQEOOSM82ada.', 'e8c18a3d657ca336b43be2bf4adab0b4', 1, '2024-05-23 21:23:19');
+INSERT INTO `usuarios` (`id`, `username`, `email`, `birthdate`, `password`, `activation_code`, `activated`, `created_at`, `role`) VALUES
+(4, 'yerson', 'yersonjr78@gmail.com', '2024-05-23', '$2y$10$si.KW0xhYprYnwD2IBgtiOtTiZwWNgBffEcXQ4kikQEOOSM82ada.', 'e8c18a3d657ca336b43be2bf4adab0b4', 1, '2024-05-23 21:23:19', 'user'),
+(5, 'admin', 'admin@farmat.com', '0000-00-00', '$2y$10$cuQ2IUTtzBeqfpLmscEXLONUkXEyKSDOiWUCECfeRTX2D2/ij0KD2', '', 1, '2024-05-24 02:48:59', 'admin');
+
+-- --------------------------------------------------------
+
+--
+-- Estructura de tabla para la tabla `ventas`
+--
+
+CREATE TABLE `ventas` (
+  `id` int(11) NOT NULL,
+  `user_id` int(11) NOT NULL,
+  `product_id` int(11) NOT NULL,
+  `quantity` int(11) NOT NULL,
+  `date` timestamp NOT NULL DEFAULT current_timestamp()
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
 -- Índices para tablas volcadas
@@ -140,6 +156,14 @@ ALTER TABLE `usuarios`
   ADD PRIMARY KEY (`id`);
 
 --
+-- Indices de la tabla `ventas`
+--
+ALTER TABLE `ventas`
+  ADD PRIMARY KEY (`id`),
+  ADD KEY `user_id` (`user_id`),
+  ADD KEY `product_id` (`product_id`);
+
+--
 -- AUTO_INCREMENT de las tablas volcadas
 --
 
@@ -147,7 +171,7 @@ ALTER TABLE `usuarios`
 -- AUTO_INCREMENT de la tabla `carrito`
 --
 ALTER TABLE `carrito`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=13;
 
 --
 -- AUTO_INCREMENT de la tabla `password_reset_tokens`
@@ -165,7 +189,13 @@ ALTER TABLE `productos`
 -- AUTO_INCREMENT de la tabla `usuarios`
 --
 ALTER TABLE `usuarios`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+
+--
+-- AUTO_INCREMENT de la tabla `ventas`
+--
+ALTER TABLE `ventas`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
 
 --
 -- Restricciones para tablas volcadas
@@ -176,6 +206,13 @@ ALTER TABLE `usuarios`
 --
 ALTER TABLE `password_reset_tokens`
   ADD CONSTRAINT `password_reset_tokens_ibfk_1` FOREIGN KEY (`user_id`) REFERENCES `usuarios` (`id`) ON DELETE CASCADE;
+
+--
+-- Filtros para la tabla `ventas`
+--
+ALTER TABLE `ventas`
+  ADD CONSTRAINT `ventas_ibfk_1` FOREIGN KEY (`user_id`) REFERENCES `usuarios` (`id`),
+  ADD CONSTRAINT `ventas_ibfk_2` FOREIGN KEY (`product_id`) REFERENCES `productos` (`id`);
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
