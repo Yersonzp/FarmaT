@@ -49,28 +49,20 @@
           <div class="main-nav d-none d-lg-block">
             <nav class="site-navigation text-right text-md-center" role="navigation">
               <ul class="site-menu js-clone-nav d-none d-lg-block">
-                <li><a href="index.php">Home</a></li>
-                <li><a href="shop.php">Store</a></li>
+                <li><a href="index.php">Inicio</a></li>
                 <li class="has-children">
-                  <a href="#">Products</a>
+                  <a href="shop.php">Productos</a>
                   <ul class="dropdown">
-                    <li><a href="#">Supplements</a></li>
-                    <li class="has-children">
-                      <a href="#">Vitamins</a>
-                      <ul class="dropdown">
-                        <li><a href="#">Supplements</a></li>
-                        <li><a href="#">Vitamins</a></li>
-                        <li><a href="#">Diet &amp; Nutrition</a></li>
-                        <li><a href="#">Tea &amp; Coffee</a></li>
-                      </ul>
-                    </li>
-                    <li><a href="#">Diet &amp; Nutrition</a></li>
-                    <li><a href="#">Tea &amp; Coffee</a></li>
-                    
+                    <li><a href="#">Suplementos</a></li>
+                    <li><a href="#">Vitaminas</a></li>
+                    <li><a href="#">Cuidado del bebe</a></li>
+                    <li><a href="#">Cuidado personal</a></li>
+                    <li><a href="#">Dieta &amp; Nutricion</a></li>
+                    <li><a href="#">Otros</a></li>
                   </ul>
                 </li>
-                <li><a href="about.html">About</a></li>
-                <li class="active"><a href="contact.html">Contact</a></li>
+                <li><a href="about.php">Acerca de</a></li>
+                <li><a href="contact.php">Contacto</a></li>
               </ul>
             </nav>
           </div>
@@ -80,14 +72,13 @@
               <span class="icon-shopping-bag"></span>
               <span class="number"><?php echo count($cartProducts); ?></span>
             </a>
-            <?php if ($user_id): ?>
+            <?php if ($user_id) : ?>
               <a href="#" class="icons-btn d-inline-block">Perfil</a>
               <a href="logout.php" class="icons-btn d-inline-block">Cerrar Sesión</a>
-            <?php else: ?>
+            <?php else : ?>
               <a href="login.php" class="icons-btn d-inline-block">Iniciar Sesión</a>
             <?php endif; ?>
-            <a href="#" class="site-menu-toggle js-menu-toggle ml-3 d-inline-block d-lg-none"><span
-                class="icon-menu"></span></a>
+            <a href="#" class="site-menu-toggle js-menu-toggle ml-3 d-inline-block d-lg-none"><span class="icon-menu"></span></a>
           </div>
         </div>
       </div>
@@ -111,9 +102,9 @@
             <h2 class="h3 mb-5 text-black">Get In Touch</h2>
           </div>
           <div class="col-md-12">
-    
+
             <form action="#" method="post">
-    
+
               <div class="p-3 p-lg-5 border">
                 <div class="form-group row">
                   <div class="col-md-6">
@@ -137,7 +128,7 @@
                     <input type="text" class="form-control" id="c_subject" name="c_subject">
                   </div>
                 </div>
-    
+
                 <div class="form-group row">
                   <div class="col-md-12">
                     <label for="c_message" class="text-black">Message </label>
@@ -152,7 +143,7 @@
               </div>
             </form>
           </div>
-          
+
         </div>
       </div>
     </div>
@@ -185,7 +176,7 @@
           </div>
         </div>
       </div>
-      
+
     </div>
 
     <footer class="site-footer">
@@ -228,9 +219,10 @@
             <p>
               <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
               Copyright &copy;
-              <script>document.write(new Date().getFullYear());</script> All rights reserved | This template is made
-              with <i class="icon-heart text-danger" aria-hidden="true"></i> by <a href="https://colorlib.com" target="_blank"
-                class="text-primary">Colorlib</a>
+              <script>
+                document.write(new Date().getFullYear());
+              </script> All rights reserved | This template is made
+              with <i class="icon-heart text-danger" aria-hidden="true"></i> by <a href="https://colorlib.com" target="_blank" class="text-primary">Colorlib</a>
               <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
             </p>
           </div>

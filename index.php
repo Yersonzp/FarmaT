@@ -55,8 +55,8 @@ if ($user_id) {
             <nav class="site-navigation text-right text-md-center" role="navigation">
               <ul class="site-menu js-clone-nav d-none d-lg-block">
                 <li class="active"><a href="index.php">Inicio</a></li>
-                <li><a href="shop.php">Catalogo</a></li>
                 <li class="has-children">
+                <a href="shop.php">Productos</a>
                   <ul class="dropdown">
                     <li><a href="#">Suplementos</a></li>
                     <li><a href="#">Vitaminas</a></li>
@@ -66,8 +66,8 @@ if ($user_id) {
                     <li><a href="#">Otros</a></li>
                   </ul>
                 </li>
-                <li><a href="about.html">Acerca de</a></li>
-                <li><a href="contact.html">Contacto</a></li>
+                <li><a href="about.php">Acerca de</a></li>
+                <li><a href="contact.php">Contacto</a></li>
               </ul>
             </nav>
           </div>

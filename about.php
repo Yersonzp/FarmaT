@@ -50,20 +50,19 @@
             <nav class="site-navigation text-right text-md-center" role="navigation">
               <ul class="site-menu js-clone-nav d-none d-lg-block">
                 <li><a href="index.php">Inicio</a></li>
-                <li><a href="shop.php">Compra</a></li>
                 <li class="has-children">
-                  <a href="#">Productos</a>
+                  <a href="shop.php">Productos</a>
                   <ul class="dropdown">
-                    <li><a href="#">Suplementacion</a></li>
-                    <li class="has-children">
-                      <li><a href="#">Vitamins</a></li>
+                    <li><a href="#">Suplementos</a></li>
+                    <li><a href="#">Vitaminas</a></li>
+                    <li><a href="#">Cuidado del bebe</a></li>
+                    <li><a href="#">Cuidado personal</a></li>
                     <li><a href="#">Dieta &amp; Nutricion</a></li>
-                    <li><a href="#">Te &amp; Coffee</a></li>
-                    
+                    <li><a href="#">Otros</a></li>
                   </ul>
                 </li>
-                <li class="active"><a href="about.html">Acerca de</a></li>
-                <li><a href="contact.html">Contacto</a></li>
+                <li><a href="about.php">Acerca de</a></li>
+                <li><a href="contact.php">Contacto</a></li>
               </ul>
             </nav>
           </div>
@@ -88,7 +87,8 @@
               <h1 class="mb-0">Acerca de <strong class="text-primary">FarmaT</strong></h1>
               <div class="row justify-content-center mb-5">
                 <div class="col-lg-6 text-center">
-                  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facilis ex perspiciatis non quibusdam vel quidem.</p>
+                  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facilis ex perspiciatis non quibusdam vel
+                    quidem.</p>
                 </div>
               </div>
             </div>
@@ -96,25 +96,26 @@
         </div>
       </div>
     </div>
-    
-    
+
+
     <div class="site-section py-5" data-aos="fade">
       <div class="container">
         <div class="row">
           <div class="col-lg-4">
             <h3 class="text-black h4">¿por que nosotros?</h3>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rem assumenda, delectus. Amet repellendus quidem, fugiat.</p>
-            
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rem assumenda, delectus. Amet repellendus
+              quidem, fugiat.</p>
+
           </div>
           <div class="col-lg-4">
             <h3 class="text-black h4">Historia</h3>
             <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Assumenda iste aut, ut similique nobis ab?</p>
-            
+
           </div>
-        
+
         </div>
       </div>
-    </div>    
+    </div>
 
     <div class="site-section bg-light custom-border-bottom" data-aos="fade">
       <div class="container">
@@ -127,7 +128,7 @@
 
         </div>
         <div class="row">
-          
+
           <div class="col-md-6 col-lg-4 mb-5">
             <div class="block-38 text-center">
               <div class="block-38-img">
@@ -174,7 +175,7 @@
             </div>
           </div>
 
-          
+
           <div class="col-md-6 col-lg-4 mb-5">
             <div class="block-38 text-center">
               <div class="block-38-img">
@@ -273,8 +274,8 @@
               <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
               Copyright &copy;
               <script>document.write(new Date().getFullYear());</script> All rights reserved | This template is made
-              with <i class="icon-heart text-danger" aria-hidden="true"></i> by <a href="https://colorlib.com" target="_blank"
-                class="text-primary">Colorlib</a>
+              with <i class="icon-heart text-danger" aria-hidden="true"></i> by <a href="https://colorlib.com"
+                target="_blank" class="text-primary">Colorlib</a>
               <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
             </p>
           </div>

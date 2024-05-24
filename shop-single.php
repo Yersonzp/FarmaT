@@ -39,8 +39,9 @@ if (isset($_POST['add_to_cart'])) {
 
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <title>Pharmative &mdash; Colorlib Template</title>
+    <title>FarmaT</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
@@ -55,6 +56,7 @@ if (isset($_POST['add_to_cart'])) {
     <link rel="stylesheet" href="css/aos.css">
     <link rel="stylesheet" href="css/style.css">
 </head>
+
 <body>
     <div class="site-wrap">
         <div class="site-navbar py-2">
@@ -71,25 +73,26 @@ if (isset($_POST['add_to_cart'])) {
                 <div class="d-flex align-items-center justify-content-between">
                     <div class="logo">
                         <div class="site-logo">
-                            <a href="index.php" class="js-logo-clone"><strong class="text-primary">Pharma</strong>tive</a>
+                            <a href="index.php" class="js-logo-clone"><strong class="text-primary">FAR</strong>MAT</a>
                         </div>
                     </div>
                     <div class="main-nav d-none d-lg-block">
                         <nav class="site-navigation text-right text-md-center" role="navigation">
                             <ul class="site-menu js-clone-nav d-none d-lg-block">
                                 <li><a href="index.php">Inicio</a></li>
-                                <li class="active"><a href="shop.php">Comprar</a></li>
                                 <li class="has-children">
-                                    <a href="#">Productos</a>
+                                    <a href="shop.php">Productos</a>
                                     <ul class="dropdown">
-                                        <li><a href="#">Suplementacion</a></li>
+                                        <li><a href="#">Suplementos</a></li>
                                         <li><a href="#">Vitaminas</a></li>
+                                        <li><a href="#">Cuidado del bebe</a></li>
+                                        <li><a href="#">Cuidado personal</a></li>
                                         <li><a href="#">Dieta &amp; Nutricion</a></li>
-                                        <li><a href="#">Te &amp; Coffee</a></li>
+                                        <li><a href="#">Otros</a></li>
                                     </ul>
                                 </li>
-                                <li><a href="about.html">Acerca de</a></li>
-                                <li><a href="contact.html">Contacto</a></li>
+                                <li><a href="about.php">Acerca de</a></li>
+                                <li><a href="contact.php">Contacto</a></li>
                             </ul>
                         </nav>
                     </div>
@@ -100,10 +103,10 @@ if (isset($_POST['add_to_cart'])) {
                             <span class="number"><?php echo count($cartProducts); ?></span>
                         </a>
                         <div class="user-buttons">
-                            <?php if ($user_id): ?>
+                            <?php if ($user_id) : ?>
                                 <a href="#" class="icons-btn d-inline-block"><span class="icon-user"></span> <?php echo htmlspecialchars($user_name); ?></a>
                                 <a href="logout.php" class="icons-btn d-inline-block"><span class="icon-sign-out"></span> Logout</a>
-                            <?php else: ?>
+                            <?php else : ?>
                                 <a href="login.php" class="icons-btn d-inline-block"><span class="icon-user"></span> Login</a>
                             <?php endif; ?>
                         </div>
@@ -116,7 +119,7 @@ if (isset($_POST['add_to_cart'])) {
         <div class="bg-light py-3">
             <div class="container">
                 <div class="row">
-                    <div class="col-md-12 mb-0"><a href="index.php">Inicio</a> <span class="mx-2 mb-0">/</span> <a href="shop.php">Comprar</a> <span class="mx-2 mb-0">/</span> <strong class="text-black"><?php echo $productos['nombre']; ?></strong></div> 
+                    <div class="col-md-12 mb-0"><a href="index.php">Inicio</a> <span class="mx-2 mb-0">/</span> <a href="shop.php">Productos</a> <span class="mx-2 mb-0">/</span> <strong class="text-black"><?php echo $productos['nombre']; ?></strong></div>
                 </div>
             </div>
         </div>
@@ -130,10 +133,10 @@ if (isset($_POST['add_to_cart'])) {
                         </div>
                     </div>
                     <div class="col-md-6">
-                        <h2 class="text-black"><?php echo $productos['nombre']; ?></h2> 
-                        <p><?php echo $productos['descripcion']; ?></p> 
+                        <h2 class="text-black"><?php echo $productos['nombre']; ?></h2>
+                        <p><?php echo $productos['descripcion']; ?></p>
                         <p><del>$<?php echo $productos['precio']; ?></del></p>
-                        
+
                         <div class="mb-5">
                             <div class="input-group mb-3" style="max-width: 220px;">
                                 <div class="input-group-prepend">
@@ -149,7 +152,7 @@ if (isset($_POST['add_to_cart'])) {
                             <input type="hidden" name="product_id" value="<?php echo $productos['id']; ?>">
                             <button type="submit" name="add_to_cart" class="buy-now btn btn-sm height-auto px-4 py-3 btn-primary">Añadir al carro</button>
                         </form>
-                        <?php if ($message): ?>
+                        <?php if ($message) : ?>
                             <p><?php echo $message; ?></p>
                         <?php endif; ?>
                     </div>
@@ -190,7 +193,7 @@ if (isset($_POST['add_to_cart'])) {
             </div>
         </footer>
     </div>
-    
+
     <script src="js/jquery-3.3.1.min.js"></script>
     <script src="js/jquery-ui.js"></script>
     <script src="js/popper.min.js"></script>
@@ -200,4 +203,5 @@ if (isset($_POST['add_to_cart'])) {
     <script src="js/aos.js"></script>
     <script src="js/main.js"></script>
 </body>
+
 </html>

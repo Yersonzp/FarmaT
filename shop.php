@@ -18,7 +18,7 @@ if ($user_id) {
 <html lang="en">
 
 <head>
-  <title>FarmaT &mdash; Colorlib Template</title>
+  <title>FarmaT</title>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
@@ -59,18 +59,19 @@ if ($user_id) {
             <nav class="site-navigation text-right text-md-center" role="navigation">
               <ul class="site-menu js-clone-nav d-none d-lg-block">
                 <li><a href="index.php">Inicio</a></li>
-                <li class="active"><a href="shop.php">Catalogo</a></li>
                 <li class="has-children">
-                  <ul class="dropdown">
-                    <li><a href="#">Suplementacion</a></li>
-                    <li class="has-children">
-                    <li><a href="#">Vitamins</a></li>
-                    <li><a href="#">Diet &amp; Nutrition</a></li>
-                    <li><a href="#">Tea &amp; Coffee</a></li>
+                <a href="shop.php">Productos</a>
+                <ul class="dropdown">
+                    <li><a href="#">Suplementos</a></li>
+                    <li><a href="#">Vitaminas</a></li>
+                    <li><a href="#">Cuidado del bebe</a></li>
+                    <li><a href="#">Cuidado personal</a></li>
+                    <li><a href="#">Dieta &amp; Nutricion</a></li>
+                    <li><a href="#">Otros</a></li>
                   </ul>
                 </li>
-                <li><a href="about.html">Acerca de</a></li>
-                <li><a href="contact.html">Contacto</a></li>
+                <li><a href="about.php">Acerca de</a></li>
+                <li><a href="contact.php">Contacto</a></li>
               </ul>
             </nav>
           </div>

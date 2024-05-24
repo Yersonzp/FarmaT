@@ -50,20 +50,19 @@
             <nav class="site-navigation text-right text-md-center" role="navigation">
               <ul class="site-menu js-clone-nav d-none d-lg-block">
                 <li><a href="index.php">Inicio</a></li>
-                <li class="active"><a href="shop.html">Comprar</a></li>
                 <li class="has-children">
-                  <a href="#">Productos</a>
+                  <a href="shop.php">Productos</a>
                   <ul class="dropdown">
-                    <li><a href="#">Suplementacion</a></li>
-                    <li class="has-children">
+                    <li><a href="#">Suplementos</a></li>
                     <li><a href="#">Vitaminas</a></li>
+                    <li><a href="#">Cuidado del bebe</a></li>
+                    <li><a href="#">Cuidado personal</a></li>
                     <li><a href="#">Dieta &amp; Nutricion</a></li>
-                    <li><a href="#">Te &amp; Coffee</a></li>
-                    
+                    <li><a href="#">Otros</a></li>
                   </ul>
                 </li>
-                <li><a href="about.html">Acerca de</a></li>
-                <li><a href="contact.html">Contacto</a></li>
+                <li><a href="about.php">Acerca de</a></li>
+                <li><a href="contact.php">Contacto</a></li>
               </ul>
             </nav>
           </div>
@@ -71,25 +70,29 @@
             <a href="#" class="icons-btn d-inline-block js-search-open"><span class="icon-search"></span></a>
             <a href="carrito.php" class="icons-btn d-inline-block bag">
               <span class="icon-shopping-bag"></span>
-              <span class="number">2</span>
+              <span class="number"><?php echo count($cartProducts); ?></span>
             </a>
-            <a href="#" class="site-menu-toggle js-menu-toggle ml-3 d-inline-block d-lg-none"><span
-                class="icon-menu"></span></a>
+            <?php if ($user_id) : ?>
+              <a href="#" class="icons-btn d-inline-block">Perfil</a>
+              <a href="logout.php" class="icons-btn d-inline-block">Cerrar Sesión</a>
+            <?php else : ?>
+              <a href="login.php" class="icons-btn d-inline-block">Iniciar Sesión</a>
+            <?php endif; ?>
+            <a href="#" class="site-menu-toggle js-menu-toggle ml-3 d-inline-block d-lg-none"><span class="icon-menu"></span></a>
           </div>
         </div>
       </div>
     </div>
-  
+
 
     <div class="bg-light py-3">
       <div class="container">
         <div class="row">
-          <div class="col-md-12 mb-0"><a href="index.php">Inicio</a> <span class="mx-2 mb-0">/</span> <strong
-              class="text-black">Gracias</strong></div>
+          <div class="col-md-12 mb-0"><a href="index.php">Inicio</a> <span class="mx-2 mb-0">/</span> <strong class="text-black">Gracias</strong></div>
         </div>
       </div>
     </div>
-    
+
     <div class="site-section">
       <div class="container">
         <div class="row">
@@ -137,7 +140,7 @@
 
           </div>
         </div>
-       
+
       </div>
     </footer>
   </div>

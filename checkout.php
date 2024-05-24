@@ -2,7 +2,7 @@
 <html lang="en">
 
 <head>
-  <title>Pharmative &mdash; Colorlib Template</title>
+  <title>FarmaT</title>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
@@ -43,27 +43,26 @@
         <div class="d-flex align-items-center justify-content-between">
           <div class="logo">
             <div class="site-logo">
-              <a href="index.php" class="js-logo-clone"><strong class="text-primary">Farma</strong>T</a>
+              <a href="index.php" class="js-logo-clone"><strong class="text-primary">FAR</strong>MAT</a>
             </div>
           </div>
           <div class="main-nav d-none d-lg-block">
             <nav class="site-navigation text-right text-md-center" role="navigation">
               <ul class="site-menu js-clone-nav d-none d-lg-block">
                 <li><a href="index.php">Inicio</a></li>
-                <li class="active"><a href="shop.html">Comprar</a></li>
                 <li class="has-children">
-                  <a href="#">Productos</a>
+                  <a href="shop.php">Productos</a>
                   <ul class="dropdown">
-                    <li><a href="#">Suplementacion</a></li>
-                    <li class="has-children">
+                    <li><a href="#">Suplementos</a></li>
                     <li><a href="#">Vitaminas</a></li>
+                    <li><a href="#">Cuidado del bebe</a></li>
+                    <li><a href="#">Cuidado personal</a></li>
                     <li><a href="#">Dieta &amp; Nutricion</a></li>
-                    <li><a href="#">Te &amp; Coffee</a></li>
-                    
+                    <li><a href="#">Otros</a></li>
                   </ul>
                 </li>
-                <li><a href="about.html">Acerca de</a></li>
-                <li><a href="contact.html">contacto</a></li>
+                <li><a href="about.php">Acerca de</a></li>
+                <li><a href="contact.php">Contacto</a></li>
               </ul>
             </nav>
           </div>
@@ -71,15 +70,22 @@
             <a href="#" class="icons-btn d-inline-block js-search-open"><span class="icon-search"></span></a>
             <a href="carrito.php" class="icons-btn d-inline-block bag">
               <span class="icon-shopping-bag"></span>
-              <span class="number">2</span>
+              <span class="number"><?php echo count($cartProducts); ?></span>
             </a>
-            <a href="#" class="site-menu-toggle js-menu-toggle ml-3 d-inline-block d-lg-none"><span
-                class="icon-menu"></span></a>
+            <div class="user-buttons">
+              <?php if ($user_id) : ?>
+                <a href="#" class="icons-btn d-inline-block"><span class="icon-user"></span> <?php echo htmlspecialchars($user_name); ?></a>
+                <a href="logout.php" class="icons-btn d-inline-block"><span class="icon-sign-out"></span> Logout</a>
+              <?php else : ?>
+                <a href="login.php" class="icons-btn d-inline-block"><span class="icon-user"></span> Login</a>
+              <?php endif; ?>
+            </div>
+            <a href="#" class="site-menu-toggle js-menu-toggle ml-3 d-inline-block d-lg-none"><span class="icon-menu"></span></a>
           </div>
         </div>
       </div>
     </div>
-  
+
 
     <div class="bg-light py-3">
       <div class="container">
@@ -129,25 +135,25 @@
                   <input type="text" class="form-control" id="c_lname" name="c_lname">
                 </div>
               </div>
-    
+
               <div class="form-group row">
                 <div class="col-md-12">
                   <label for="c_companyname" class="text-black">Nombre de la empresa </label>
                   <input type="text" class="form-control" id="c_companyname" name="c_companyname">
                 </div>
               </div>
-    
+
               <div class="form-group row">
                 <div class="col-md-12">
                   <label for="c_address" class="text-black">Direccion <span class="text-danger">*</span></label>
                   <input type="text" class="form-control" id="c_address" name="c_address" placeholder="Escriba la dirrecion">
                 </div>
               </div>
-    
+
               <div class="form-group">
                 <input type="text" class="form-control" placeholder="Apartamento, suite, unidad etc. (opcional)">
               </div>
-    
+
               <div class="form-group row">
                 <div class="col-md-6">
                   <label for="c_state_country" class="text-black">Estado / Pais <span class="text-danger">*</span></label>
@@ -158,7 +164,7 @@
                   <input type="text" class="form-control" id="c_postal_zip" name="c_postal_zip">
                 </div>
               </div>
-    
+
               <div class="form-group row mb-5">
                 <div class="col-md-6">
                   <label for="c_email_address" class="text-black">Direccion del correo <span class="text-danger">*</span></label>
@@ -169,36 +175,32 @@
                   <input type="text" class="form-control" id="c_phone" name="c_phone" placeholder="Phone Number">
                 </div>
               </div>
-    
+
               <div class="form-group">
-                <label for="c_create_account" class="text-black" data-toggle="collapse" href="#create_an_account"
-                  role="button" aria-expanded="false" aria-controls="create_an_account"><input type="checkbox" value="1"
-                    id="c_create_account"> ¿Crear una cuenta?</label>
+                <label for="c_create_account" class="text-black" data-toggle="collapse" href="#create_an_account" role="button" aria-expanded="false" aria-controls="create_an_account"><input type="checkbox" value="1" id="c_create_account"> ¿Crear una cuenta?</label>
                 <div class="collapse" id="create_an_account">
                   <div class="py-2">
                     <p class="mb-3">Crea una cuenta intruduciendo la informacion que aparece a continuacio.
                       Uste es un cliente recurrente,inicie session en la parte superior de la pagina.</p>
                     <div class="form-group">
                       <label for="c_account_password" class="text-black">Contraseña de la cuenta</label>
-                      <input type="email" class="form-control" id="c_account_password" name="c_account_password"
-                        placeholder="">
+                      <input type="email" class="form-control" id="c_account_password" name="c_account_password" placeholder="">
                     </div>
                   </div>
                 </div>
               </div>
-    
-    
-              
+
+
+
               <div class="form-group">
                 <label for="c_order_notes" class="text-black">Notas del pedido</label>
-                <textarea name="c_order_notes" id="c_order_notes" cols="30" rows="5" class="form-control"
-                  placeholder="Write your notes here..."></textarea>
+                <textarea name="c_order_notes" id="c_order_notes" cols="30" rows="5" class="form-control" placeholder="Write your notes here..."></textarea>
               </div>
-    
+
             </div>
           </div>
           <div class="col-md-6">
-    
+
             <div class="row mb-5">
               <div class="col-md-12">
                 <h2 class="h3 mb-3 text-black">Su pedido</h2>
@@ -227,52 +229,54 @@
                       </tr>
                     </tbody>
                   </table>
-    
+
                   <div class="border mb-3">
-                    <h3 class="h6 mb-0"><a class="d-block" data-toggle="collapse" href="#collapsebank" role="button"
-                        aria-expanded="false" aria-controls="collapsebank">Transferencia bancaria directa</a></h3>
-    
+                    <h3 class="h6 mb-0"><a class="d-block" data-toggle="collapse" href="#collapsebank" role="button" aria-expanded="false" aria-controls="collapsebank">Transferencia bancaria directa</a></h3>
+
                     <div class="collapse" id="collapsebank">
                       <div class="py-2 px-4">
-                        <p class="mb-0">Make your payment directly into our bank account. Please use your Order ID as the
-                          payment reference. Your order won’t be shipped until the funds have cleared in our account.</p>
+                        <p class="mb-0">Make your payment directly into our bank account. Please use your Order ID as
+                          the
+                          payment reference. Your order won’t be shipped until the funds have cleared in our account.
+                        </p>
                       </div>
                     </div>
                   </div>
-    
+
                   <div class="border mb-3">
-                    <h3 class="h6 mb-0"><a class="d-block" data-toggle="collapse" href="#collapsecheque" role="button"
-                        aria-expanded="false" aria-controls="collapsecheque">Pago con cheque</a></h3>
-    
+                    <h3 class="h6 mb-0"><a class="d-block" data-toggle="collapse" href="#collapsecheque" role="button" aria-expanded="false" aria-controls="collapsecheque">Pago con cheque</a></h3>
+
                     <div class="collapse" id="collapsecheque">
                       <div class="py-2 px-4">
-                        <p class="mb-0">Make your payment directly into our bank account. Please use your Order ID as the
-                          payment reference. Your order won’t be shipped until the funds have cleared in our account.</p>
+                        <p class="mb-0">Make your payment directly into our bank account. Please use your Order ID as
+                          the
+                          payment reference. Your order won’t be shipped until the funds have cleared in our account.
+                        </p>
                       </div>
                     </div>
                   </div>
-    
+
                   <div class="border mb-5">
-                    <h3 class="h6 mb-0"><a class="d-block" data-toggle="collapse" href="#collapsepaypal" role="button"
-                        aria-expanded="false" aria-controls="collapsepaypal">Paypal</a></h3>
-    
+                    <h3 class="h6 mb-0"><a class="d-block" data-toggle="collapse" href="#collapsepaypal" role="button" aria-expanded="false" aria-controls="collapsepaypal">Paypal</a></h3>
+
                     <div class="collapse" id="collapsepaypal">
                       <div class="py-2 px-4">
-                        <p class="mb-0">Make your payment directly into our bank account. Please use your Order ID as the
-                          payment reference. Your order won’t be shipped until the funds have cleared in our account.</p>
+                        <p class="mb-0">Make your payment directly into our bank account. Please use your Order ID as
+                          the
+                          payment reference. Your order won’t be shipped until the funds have cleared in our account.
+                        </p>
                       </div>
                     </div>
                   </div>
-    
+
                   <div class="form-group">
-                    <button class="btn btn-primary btn-lg btn-block" onclick="window.location='thankyou.html'">Hacer
-                      pedido</button>
+                    <button class="btn btn-primary btn-lg btn-block" onclick="window.location='thankyou.php'">Hacer pedido</button>
                   </div>
-    
+
                 </div>
               </div>
             </div>
-    
+
           </div>
         </div>
         <!-- </form> -->
