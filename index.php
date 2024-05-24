@@ -18,7 +18,7 @@ if ($user_id) {
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <title>FARMAT</title>
+  <title>FarmaT</title>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
@@ -48,7 +48,7 @@ if ($user_id) {
         <div class="d-flex align-items-center justify-content-between">
           <div class="logo">
             <div class="site-logo">
-              <a href="index.php" class="js-logo-clone"><strong class="text-primary">FAR</strong>MAT</a>
+              <a href="index.php" class="js-logo-clone"><strong class="text-primary">FarmaT</strong></a>
             </div>
           </div>
           <div class="main-nav d-none d-lg-block">
@@ -80,9 +80,9 @@ if ($user_id) {
             <div class="user-buttons">
               <?php if ($user_id): ?>
                 <a href="#" class="icons-btn d-inline-block"><span class="icon-user"></span> <?php echo htmlspecialchars($user_name); ?></a>
-                <a href="logout.php" class="icons-btn d-inline-block"><span class="icon-sign-out"></span> Logout</a>
+                <a href="logout.php" class="icons-btn d-inline-block"><span class="icon-sign-out"></span> Cerrar Sesion</a>
               <?php else: ?>
-                <a href="login.php" class="icons-btn d-inline-block"><span class="icon-user"></span> Login</a>
+                <a href="login.php" class="icons-btn d-inline-block"><span class="icon-user"></span> Iniciar Sesion</a>
               <?php endif; ?>
             </div>
             <a href="#" class="site-menu-toggle js-menu-toggle ml-3 d-inline-block d-lg-none"><span class="icon-menu"></span></a>
@@ -142,8 +142,8 @@ if ($user_id) {
           <div class="col-lg-4">
             <div class="feature">
               <span class="wrap-icon flaticon-medicine"></span>
-              <h3><a href="#">nueva medicina todos los dias</a></h3>
-              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Culpa laborum voluptates excepturi neque labore .</p>
+              <h3><a href="#">Nueva medicina todos los dias</a></h3>
+              <p>Descubre nuestras últimas adquisiciones farmacéuticas, ¡tu salud es nuestra prioridad! Actualizamos nuestro inventario diariamente para ofrecerte lo mejor en medicina.</p>
               <p><a href="#" class="d-flex align-items-center"><span class="mr-2">Learn more</span> <span class="icon-keyboard_arrow_right"></span></a></p>
             </div>
           </div>
@@ -209,17 +209,17 @@ if ($user_id) {
           <div class="col-md-6 col-lg-4 mb-4 mb-lg-0">
             <div class="block-7">
               <h3 class="footer-heading mb-4">Acerca de <strong class="text-primary">FarmaT</strong></h3>
-              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eius quae reiciendis distinctio voluptates
-                sed dolorum excepturi iure eaque, aut unde.</p>
+              <p>En nuestra farmacia en línea, nos dedicamos a ofrecerte productos farmacéuticos de alta calidad y servicios confiables para cuidar de tu salud y bienestar.
+                 Con un amplio catálogo de medicamentos, productos de cuidado personal y atención al cliente excepcional, estamos aquí para ser tu aliado en el camino hacia una vida más saludable.</p>
             </div>
           </div>
           <div class="col-lg-3 mx-auto mb-5 mb-lg-0">
             <h3 class="footer-heading mb-4">Navegacion</h3>
             <ul class="list-unstyled">
-              <li><a href="#">Suplementacion</a></li>
+              <li><a href="#">Suplementos</a></li>
               <li><a href="#">Vitaminas</a></li>
               <li><a href="#">Dieta &amp; Nutricion</a></li>
-              <li><a href="#">Te &amp; Coffee</a></li>
+              <li><a href="#">Te &amp; Cafe</a></li>
             </ul>
           </div>
 
@@ -227,8 +227,8 @@ if ($user_id) {
             <div class="block-5 mb-5">
               <h3 class="footer-heading mb-4">Contacto de Informacion</h3>
               <ul class="list-unstyled">
-                <li class="address">203 Fake St. Mountain View, San Francisco, Cartagena</li>
-                <li class="phone"><a href="tel://3217514647">+3217514647</a></li>
+                <li class="address">Calle 30 20-115,Cartagena</li>
+                <li class="phone"><a href="tel://3217514647">3217514647</a></li>
                 <li class="email">yeimerballesta@gmail.com</li>
               </ul>
             </div>
