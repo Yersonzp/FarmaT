@@ -52,7 +52,7 @@ if ($user_id) {
         <div class="d-flex align-items-center justify-content-between">
           <div class="logo">
             <div class="site-logo">
-              <a href="index.php" class="js-logo-clone"><strong class="text-primary">FAR</strong>MAT</a>
+              <a href="index.php" class="js-logo-clone"><strong class="text-primary">FarmaT</strong></a>
             </div>
           </div>
           <div class="main-nav d-none d-lg-block">
@@ -156,16 +156,17 @@ if ($user_id) {
           <div class="col-md-6 col-lg-4 mb-4 mb-lg-0">
             <div class="block-7">
               <h3 class="footer-heading mb-4">Acerca de <strong class="text-primary">FarmaT</strong></h3>
-              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eius quae reiciendis distinctio voluptates sed dolorum excepturi iure eaque, aut unde.</p>
+              <p>En nuestra farmacia en línea, nos dedicamos a ofrecerte productos farmacéuticos de alta calidad y servicios confiables para cuidar de tu salud y bienestar. Con un amplio catálogo de medicamentos, productos de cuidado personal y atención al cliente excepcional, 
+                estamos aquí para ser tu aliado en el camino hacia una vida más saludable.</p>
             </div>
           </div>
           <div class="col-lg-3 mx-auto mb-5 mb-lg-0">
             <h3 class="footer-heading mb-4">Navegacion</h3>
             <ul class="list-unstyled">
-              <li><a href="#">Suplementacion</a></li>
+              <li><a href="#">Suplementos</a></li>
               <li><a href="#">Vitaminas</a></li>
               <li><a href="#">Dieta &amp; Nutricion</a></li>
-              <li><a href="#">Te &amp; Coffee</a></li>
+              <li><a href="#">Te &amp; Cafe</a></li>
             </ul>
           </div>
 
@@ -173,8 +174,8 @@ if ($user_id) {
             <div class="block-5 mb-5">
               <h3 class="footer-heading mb-4">Contacto de Informacion</h3>
               <ul class="list-unstyled">
-                <li class="address">203 Fake St. Mountain View, San Francisco, Cartagena</li>
-                <li class="phone"><a href="tel://23923929210">+3217514647</a></li>
+                <li class="address">Calle 30 20-115,Cartagena</li>
+                <li class="phone"><a href="tel://3217514647">3217514647</a></li>
                 <li class="email">yeimerballesta@gmail.com</li>
               </ul>
             </div>
