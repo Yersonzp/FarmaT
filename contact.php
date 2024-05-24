@@ -2,7 +2,7 @@
 <html lang="en">
 
 <head>
-  <title>Pharmative &mdash; Colorlib Template</title>
+  <title>FarmaT</title>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
@@ -43,7 +43,7 @@
         <div class="d-flex align-items-center justify-content-between">
           <div class="logo">
             <div class="site-logo">
-              <a href="index.php" class="js-logo-clone"><strong class="text-primary">Pharma</strong>tive</a>
+              <a href="index.php" class="js-logo-clone"><strong class="text-primary">FarmaT</strong></a>
             </div>
           </div>
           <div class="main-nav d-none d-lg-block">
@@ -88,8 +88,8 @@
       <div class="container">
         <div class="row">
           <div class="col-md-12 mb-0">
-            <a href="index.php">Home</a> <span class="mx-2 mb-0">/</span>
-            <strong class="text-black">Contact</strong>
+            <a href="index.php">Inicio</a> <span class="mx-2 mb-0">/</span>
+            <strong class="text-black">Contacto</strong>
           </div>
         </div>
       </div>
@@ -99,7 +99,7 @@
       <div class="container">
         <div class="row">
           <div class="col-md-12">
-            <h2 class="h3 mb-5 text-black">Get In Touch</h2>
+            <h2 class="h3 mb-5 text-black">Póngase en contacto</h2>
           </div>
           <div class="col-md-12">
 
@@ -108,11 +108,11 @@
               <div class="p-3 p-lg-5 border">
                 <div class="form-group row">
                   <div class="col-md-6">
-                    <label for="c_fname" class="text-black">First Name <span class="text-danger">*</span></label>
+                    <label for="c_fname" class="text-black">Nombre <span class="text-danger">*</span></label>
                     <input type="text" class="form-control" id="c_fname" name="c_fname">
                   </div>
                   <div class="col-md-6">
-                    <label for="c_lname" class="text-black">Last Name <span class="text-danger">*</span></label>
+                    <label for="c_lname" class="text-black">Apellido <span class="text-danger">*</span></label>
                     <input type="text" class="form-control" id="c_lname" name="c_lname">
                   </div>
                 </div>
@@ -124,20 +124,20 @@
                 </div>
                 <div class="form-group row">
                   <div class="col-md-12">
-                    <label for="c_subject" class="text-black">Subject </label>
+                    <label for="c_subject" class="text-black">Asunto </label>
                     <input type="text" class="form-control" id="c_subject" name="c_subject">
                   </div>
                 </div>
 
                 <div class="form-group row">
                   <div class="col-md-12">
-                    <label for="c_message" class="text-black">Message </label>
+                    <label for="c_message" class="text-black">Mensaje </label>
                     <textarea name="c_message" id="c_message" cols="30" rows="7" class="form-control"></textarea>
                   </div>
                 </div>
                 <div class="form-group row">
                   <div class="col-lg-12">
-                    <input type="submit" class="btn btn-primary btn-lg btn-block" value="Send Message">
+                    <input type="submit" class="btn btn-primary btn-lg btn-block" value="Enviar Mensaje">
                   </div>
                 </div>
               </div>
@@ -154,26 +154,16 @@
       <div class="container">
         <div class="row">
           <div class="col-12">
-            <h2 class="text-black mb-4">Offices</h2>
+            <h2 class="text-black mb-4">Oficia</h2>
           </div>
           <div class="col-lg-4">
             <div class="p-4 bg-white mb-3 rounded">
-              <span class="d-block text-black h6 text-uppercase">New York</span>
-              <p class="mb-0">203 Fake St. Mountain View, San Francisco, California, USA</p>
+              <span class="d-block text-black h6 text-uppercase">Cartagena</span>
+              <p class="mb-0">Calle 30 20-115,Cartagena</p>
             </div>
           </div>
-          <div class="col-lg-4">
-            <div class="p-4 bg-white mb-3 rounded">
-              <span class="d-block text-black h6 text-uppercase">London</span>
-              <p class="mb-0">203 Fake St. Mountain View, San Francisco, California, USA</p>
-            </div>
-          </div>
-          <div class="col-lg-4">
-            <div class="p-4 bg-white mb-3 rounded">
-              <span class="d-block text-black h6 text-uppercase">Canada</span>
-              <p class="mb-0">203 Fake St. Mountain View, San Francisco, California, USA</p>
-            </div>
-          </div>
+         
+          
         </div>
       </div>
 
@@ -185,29 +175,29 @@
           <div class="col-md-6 col-lg-4 mb-4 mb-lg-0">
 
             <div class="block-7">
-              <h3 class="footer-heading mb-4">About <strong class="text-primary">Pharmative</strong></h3>
-              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eius quae reiciendis distinctio voluptates
-                sed dolorum excepturi iure eaque, aut unde.</p>
+              <h3 class="footer-heading mb-4">Acerca de <strong class="text-primary">FarmaT</strong></h3>
+              <p>En nuestra farmacia en línea, nos dedicamos a ofrecerte productos farmacéuticos de alta calidad y servicios confiables para cuidar de tu salud y bienestar. Con un amplio catálogo de medicamentos, productos de cuidado personal y atención al cliente excepcional, 
+                estamos aquí para ser tu aliado en el camino hacia una vida más saludable.</p>
             </div>
 
           </div>
           <div class="col-lg-3 mx-auto mb-5 mb-lg-0">
             <h3 class="footer-heading mb-4">Navigation</h3>
             <ul class="list-unstyled">
-              <li><a href="#">Supplements</a></li>
-              <li><a href="#">Vitamins</a></li>
-              <li><a href="#">Diet &amp; Nutrition</a></li>
-              <li><a href="#">Tea &amp; Coffee</a></li>
+              <li><a href="#">Suplementos</a></li>
+              <li><a href="#">Vitaminas</a></li>
+              <li><a href="#">Dieta &amp; Nutricion</a></li>
+              <li><a href="#">Te &amp; Cafe</a></li>
             </ul>
           </div>
 
           <div class="col-md-6 col-lg-3">
             <div class="block-5 mb-5">
-              <h3 class="footer-heading mb-4">Contact Info</h3>
+              <h3 class="footer-heading mb-4">Informacion de Contacto</h3>
               <ul class="list-unstyled">
-                <li class="address">203 Fake St. Mountain View, San Francisco, California, USA</li>
-                <li class="phone"><a href="tel://23923929210">+2 392 3929 210</a></li>
-                <li class="email">emailaddress@domain.com</li>
+                <li class="address">Calle 30 20-115,Cartagena</li>
+                <li class="phone"><a href="tel://3217514647">3217514647</a></li>
+                <li class="email">yeimerballesta@gmail.com</li>
               </ul>
             </div>
 
@@ -219,10 +209,8 @@
             <p>
               <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
               Copyright &copy;
-              <script>
-                document.write(new Date().getFullYear());
-              </script> All rights reserved | This template is made
-              with <i class="icon-heart text-danger" aria-hidden="true"></i> by <a href="https://colorlib.com" target="_blank" class="text-primary">Colorlib</a>
+              <script>document.write(new Date().getFullYear());</script> Todos los derechos reservados por <a href="" target="_blank"
+              class="text-primary">FarmaT</a>
               <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
             </p>
           </div>
