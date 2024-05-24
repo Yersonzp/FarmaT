@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 24-05-2024 a las 06:13:50
+-- Tiempo de generación: 24-05-2024 a las 13:31:41
 -- Versión del servidor: 10.4.32-MariaDB
 -- Versión de PHP: 8.2.12
 
@@ -42,8 +42,7 @@ CREATE TABLE `carrito` (
 INSERT INTO `carrito` (`id`, `user_id`, `product_id`, `quantity`, `added_on`) VALUES
 (7, 1, 3, 3, '2024-05-23 16:22:18'),
 (8, 1, 5, 1, '2024-05-23 16:34:45'),
-(9, 1, 2, 2, '2024-05-23 17:37:17'),
-(12, 4, 3, 1, '2024-05-24 00:36:07');
+(9, 1, 2, 2, '2024-05-23 17:37:17');
 
 -- --------------------------------------------------------
 
@@ -77,12 +76,12 @@ CREATE TABLE `productos` (
 --
 
 INSERT INTO `productos` (`id`, `nombre`, `descripcion`, `precio`, `imagen`) VALUES
-(1, 'Bioderma', 'Descripción de Bioderma', 55.00, 'product_01.png'),
 (2, 'Chanca Piedra', 'Descripción de Chanca Piedra', 70.00, 'product_02.png'),
 (3, 'Umcka Cold Care', 'Descripción de Umcka Cold Care', 120.00, 'product_03.png'),
 (4, 'Cetyl Pure', 'Descripción de Cetyl Pure', 20.00, 'product_04.png'),
 (5, 'CLA Core', 'Descripción de CLA Core', 38.00, 'product_05.png'),
-(6, 'Poo Pourri', 'Descripción de Poo Pourri', 38.00, 'product_06.png');
+(6, 'Poo Pourri', 'Descripción de Poo Pourri', 38.00, 'product_06.png'),
+(7, 'acetaminofén ', 'leer indicaciones en el empaque', 5000.00, 'uploads/acetaminofen_500_mg_coaspharma-116566-1559915952.png');
 
 -- --------------------------------------------------------
 
@@ -183,7 +182,7 @@ ALTER TABLE `password_reset_tokens`
 -- AUTO_INCREMENT de la tabla `productos`
 --
 ALTER TABLE `productos`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
 
 --
 -- AUTO_INCREMENT de la tabla `usuarios`
