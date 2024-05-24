@@ -136,7 +136,7 @@
                 <div class="block-38-header">
                   <img src="images/person_2.jpg" alt="Image placeholder" class="mb-4">
                   <h3 class="block-38-heading h4">Yerson Zapatas</h3>
-                  <p class="block-38-subheading">Confundador</p>
+                  <p class="block-38-subheading">Coofundador</p>
                 </div>
                 <div class="block-38-body">
                   <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae aut minima nihil sit distinctio
@@ -151,7 +151,7 @@
                 <div class="block-38-header">
                   <img src="images/person_3.jpg" alt="Image placeholder" class="mb-4">
                   <h3 class="block-38-heading h4">Yonny Perez</h3>
-                  <p class="block-38-subheading">Confundador</p>
+                  <p class="block-38-subheading">Coofundador</p>
                 </div>
                 <div class="block-38-body">
                   <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae aut minima nihil sit distinctio
@@ -166,7 +166,7 @@
                 <div class="block-38-header">
                   <img src="images/person_4.jpg" alt="Image placeholder" class="mb-4">
                   <h3 class="block-38-heading h4">Omar Ricardo</h3>
-                  <p class="block-38-subheading">Confundador</p>
+                  <p class="block-38-subheading">Coofundador</p>
                 </div>
                 <div class="block-38-body">
                   <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae aut minima nihil sit distinctio
@@ -183,7 +183,7 @@
                 <div class="block-38-header">
                   <img src="images/person_2.jpg" alt="Image placeholder" class="mb-4">
                   <h3 class="block-38-heading h4">Yeimer Ballesta</h3>
-                  <p class="block-38-subheading">Confundador</p>
+                  <p class="block-38-subheading">Coofundador</p>
                 </div>
                 <div class="block-38-body">
                   <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae aut minima nihil sit distinctio
