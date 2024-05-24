@@ -2,7 +2,7 @@
 <html lang="en">
 
 <head>
-  <title>Pharmative &mdash; Colorlib Template</title>
+  <title>FarmaT</title>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
@@ -87,8 +87,8 @@
               <h1 class="mb-0">Acerca de <strong class="text-primary">FarmaT</strong></h1>
               <div class="row justify-content-center mb-5">
                 <div class="col-lg-6 text-center">
-                  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facilis ex perspiciatis non quibusdam vel
-                    quidem.</p>
+                  <p>En nuestra farmacia en línea, nos dedicamos a ofrecerte productos farmacéuticos de alta calidad y servicios confiables para cuidar de tu salud y bienestar. Con un amplio catálogo de medicamentos, productos de cuidado personal y atención al cliente excepcional, 
+                    estamos aquí para ser tu aliado en el camino hacia una vida más saludable.</p>
                 </div>
               </div>
             </div>
@@ -102,14 +102,15 @@
       <div class="container">
         <div class="row">
           <div class="col-lg-4">
-            <h3 class="text-black h4">¿por que nosotros?</h3>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rem assumenda, delectus. Amet repellendus
-              quidem, fugiat.</p>
+            <h3 class="text-black h4">¿Por que nosotros?</h3>
+            <p>Enfocados en tu bienestar, ofrecemos productos farmacéuticos de calidad y atención personalizada.
+               Confía en nosotros para cuidar de tu salud cada día.</p>
 
           </div>
           <div class="col-lg-4">
             <h3 class="text-black h4">Historia</h3>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Assumenda iste aut, ut similique nobis ab?</p>
+            <p>Nuestra historia está marcada por un compromiso inquebrantable con la salud y el bienestar de nuestra comunidad. Desde nuestros inicios, hemos buscado ofrecer productos farmacéuticos de calidad y un servicio excepcional, 
+              convirtiéndonos en un referente confiable en el cuidado de la salud.</p>
 
           </div>
 
@@ -164,7 +165,7 @@
               <div class="block-38-img">
                 <div class="block-38-header">
                   <img src="images/person_4.jpg" alt="Image placeholder" class="mb-4">
-                  <h3 class="block-38-heading h4">Ormar</h3>
+                  <h3 class="block-38-heading h4">Omar Ricardo</h3>
                   <p class="block-38-subheading">Confundador</p>
                 </div>
                 <div class="block-38-body">
@@ -205,8 +206,8 @@
             </div>
             <div class="text">
               <h2>Envio gratis</h2>
-              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus at iaculis quam. Integer accumsan
-                tincidunt fringilla.</p>
+              <p>¡Disfruta de envío gratuito en todos tus pedidos! Simplificamos tu experiencia de compra,
+                 llevando tus productos farmacéuticos directamente a tu puerta sin costo adicional.</p>
             </div>
           </div>
           <div class="col-md-6 col-lg-4 d-lg-flex mb-4 mb-lg-0 pl-4" data-aos="fade-up" data-aos-delay="100">
@@ -215,8 +216,8 @@
             </div>
             <div class="text">
               <h2>Devoluciones gratuitas</h2>
-              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus at iaculis quam. Integer accumsan
-                tincidunt fringilla.</p>
+              <p>Ofrecemos devoluciones gratuitas para garantizar tu completa satisfacción.
+                 Si por alguna razón necesitas realizar un cambio, estamos aquí para ayudarte, sin costos adicionales..</p>
             </div>
           </div>
           <div class="col-md-6 col-lg-4 d-lg-flex mb-4 mb-lg-0 pl-4" data-aos="fade-up" data-aos-delay="200">
@@ -225,8 +226,8 @@
             </div>
             <div class="text">
               <h2>Atencion al cliente</h2>
-              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus at iaculis quam. Integer accumsan
-                tincidunt fringilla.</p>
+              <p>Nuestro equipo de atención al cliente está aquí para ti. Con un servicio dedicado y amigable, 
+                estamos listos para resolver cualquier consulta o inquietud que puedas tener. ¡Tu satisfacción es nuestra prioridad!.</p>
             </div>
           </div>
         </div>
@@ -239,29 +240,29 @@
           <div class="col-md-6 col-lg-4 mb-4 mb-lg-0">
 
             <div class="block-7">
-              <h3 class="footer-heading mb-4">About <strong class="text-primary">Pharmative</strong></h3>
-              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eius quae reiciendis distinctio voluptates
-                sed dolorum excepturi iure eaque, aut unde.</p>
+              <h3 class="footer-heading mb-4">About <strong class="text-primary">Farma</strong>T</h3>
+              <p>En nuestra farmacia en línea, nos dedicamos a ofrecerte productos farmacéuticos de alta calidad y servicios confiables para cuidar de tu salud y bienestar. Con un amplio catálogo de medicamentos, productos de cuidado personal y atención al cliente excepcional, 
+                estamos aquí para ser tu aliado en el camino hacia una vida más saludable.</p>
             </div>
 
           </div>
           <div class="col-lg-3 mx-auto mb-5 mb-lg-0">
-            <h3 class="footer-heading mb-4">Navigation</h3>
+            <h3 class="footer-heading mb-4">Navegacion</h3>
             <ul class="list-unstyled">
-              <li><a href="#">Supplements</a></li>
-              <li><a href="#">Vitamins</a></li>
-              <li><a href="#">Diet &amp; Nutrition</a></li>
-              <li><a href="#">Tea &amp; Coffee</a></li>
+              <li><a href="#">Suplementos</a></li>
+              <li><a href="#">Vitaminas</a></li>
+              <li><a href="#">Dieta &amp; Nutricion</a></li>
+              <li><a href="#">Te &amp; Cafe</a></li>
             </ul>
           </div>
 
           <div class="col-md-6 col-lg-3">
             <div class="block-5 mb-5">
-              <h3 class="footer-heading mb-4">Contact Info</h3>
+              <h3 class="footer-heading mb-4">Informacion de Contacto</h3>
               <ul class="list-unstyled">
-                <li class="address">203 Fake St. Mountain View, San Francisco, California, USA</li>
-                <li class="phone"><a href="tel://23923929210">+2 392 3929 210</a></li>
-                <li class="email">emailaddress@domain.com</li>
+                <li class="address">Calle 30 20-115,Cartagena</li>
+                <li class="phone"><a href="tel://3217514647">3217514647</a></li>
+                <li class="email">yeimerballesta@gmail.com</li>
               </ul>
             </div>
 
@@ -273,9 +274,8 @@
             <p>
               <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
               Copyright &copy;
-              <script>document.write(new Date().getFullYear());</script> All rights reserved | This template is made
-              with <i class="icon-heart text-danger" aria-hidden="true"></i> by <a href="https://colorlib.com"
-                target="_blank" class="text-primary">Colorlib</a>
+              <script>document.write(new Date().getFullYear());</script> Todos los derechos reservados por <a href="" target="_blank"
+              class="text-primary">FarmaT</a>
               <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
             </p>
           </div>
