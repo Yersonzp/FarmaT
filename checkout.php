@@ -75,9 +75,9 @@
             <div class="user-buttons">
               <?php if ($user_id) : ?>
                 <a href="#" class="icons-btn d-inline-block"><span class="icon-user"></span> <?php echo htmlspecialchars($user_name); ?></a>
-                <a href="logout.php" class="icons-btn d-inline-block"><span class="icon-sign-out"></span> Logout</a>
+                <a href="logout.php" class="icons-btn d-inline-block"><span class="icon-sign-out"></span> Cerrar Sesion</a>
               <?php else : ?>
-                <a href="login.php" class="icons-btn d-inline-block"><span class="icon-user"></span> Login</a>
+                <a href="login.php" class="icons-btn d-inline-block"><span class="icon-user"></span> Iniciar Sesion</a>
               <?php endif; ?>
             </div>
             <a href="#" class="site-menu-toggle js-menu-toggle ml-3 d-inline-block d-lg-none"><span class="icon-menu"></span></a>
@@ -103,7 +103,7 @@
         <div class="row mb-5">
           <div class="col-md-12">
             <div class="bg-light rounded p-3">
-              <p class="mb-0">Returning customer? <a href="#" class="d-inline-block">Click here</a> to login</p>
+              <p class="mb-0">Returning customer? <a href="#" class="d-inline-block">Click aqui</a> para ingresar</p>
             </div>
           </div>
         </div>
@@ -235,9 +235,8 @@
 
                     <div class="collapse" id="collapsebank">
                       <div class="py-2 px-4">
-                        <p class="mb-0">Make your payment directly into our bank account. Please use your Order ID as
-                          the
-                          payment reference. Your order won’t be shipped until the funds have cleared in our account.
+                        <p class="mb-0">Realiza tu pago directamente en nuestra cuenta bancaria. Por favor, utilice su ID de pedido como
+                          Referencia de pago. Su pedido no se enviará hasta que los fondos se hayan liquidado en nuestra cuenta
                         </p>
                       </div>
                     </div>
@@ -248,9 +247,8 @@
 
                     <div class="collapse" id="collapsecheque">
                       <div class="py-2 px-4">
-                        <p class="mb-0">Make your payment directly into our bank account. Please use your Order ID as
-                          the
-                          payment reference. Your order won’t be shipped until the funds have cleared in our account.
+                        <p class="mb-0">Realiza tu pago directamente en nuestra cuenta bancaria. Por favor, utilice su ID de pedido como
+                          Referencia de pago. Su pedido no se enviará hasta que los fondos se hayan liquidado en nuestra cuenta.
                         </p>
                       </div>
                     </div>
@@ -261,9 +259,8 @@
 
                     <div class="collapse" id="collapsepaypal">
                       <div class="py-2 px-4">
-                        <p class="mb-0">Make your payment directly into our bank account. Please use your Order ID as
-                          the
-                          payment reference. Your order won’t be shipped until the funds have cleared in our account.
+                        <p class="mb-0">Realiza tu pago directamente en nuestra cuenta bancaria. Por favor, utilice su ID de pedido como
+                          Referencia de pago. Su pedido no se enviará hasta que los fondos se hayan liquidado en nuestra cuenta.
                         </p>
                       </div>
                     </div>
@@ -288,19 +285,19 @@
           <div class="col-md-6 col-lg-4 mb-4 mb-lg-0">
 
             <div class="block-7">
-              <h3 class="footer-heading mb-4">About <strong class="text-primary">Pharmative</strong></h3>
-              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eius quae reiciendis distinctio voluptates
-                sed dolorum excepturi iure eaque, aut unde.</p>
+              <h3 class="footer-heading mb-4">Acerca de <strong class="text-primary">FarmaT</strong></h3>
+              <p>En nuestra farmacia en línea, nos dedicamos a ofrecerte productos farmacéuticos de alta calidad y servicios confiables para cuidar de tu salud y bienestar. Con un amplio catálogo de medicamentos, productos de cuidado personal y atención al cliente excepcional, 
+                estamos aquí para ser tu aliado en el camino hacia una vida más saludable.</p>
             </div>
 
           </div>
           <div class="col-lg-3 mx-auto mb-5 mb-lg-0">
             <h3 class="footer-heading mb-4">Navegacion</h3>
             <ul class="list-unstyled">
-              <li><a href="#">Suplemento</a></li>
+              <li><a href="#">Suplementos</a></li>
               <li><a href="#">Vitaminas</a></li>
               <li><a href="#">Dieta &amp; Nutricion</a></li>
-              <li><a href="#">Te &amp; Coffee</a></li>
+              <li><a href="#">Te &amp; Cafe</a></li>
             </ul>
           </div>
 
@@ -308,8 +305,8 @@
             <div class="block-5 mb-5">
               <h3 class="footer-heading mb-4"> Informacion de contacto</h3>
               <ul class="list-unstyled">
-                <li class="address">203 Fake St. Mountain View, San Francisco,Cartagena</li>
-                <li class="phone"><a href="tel://23923929210">+3217514647</a></li>
+                <li class="address">Informacion de contacto</li>
+                <li class="phone"><a href="tel://3217514647">3217514647</a></li>
                 <li class="email">yeimerballesta@gmail.com</li>
               </ul>
             </div>
