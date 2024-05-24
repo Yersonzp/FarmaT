@@ -43,7 +43,7 @@
         <div class="d-flex align-items-center justify-content-between">
           <div class="logo">
             <div class="site-logo">
-              <a href="index.php" class="js-logo-clone"><strong class="text-primary">Pharma</strong>tive</a>
+              <a href="index.php" class="js-logo-clone"><strong class="text-primary">Farmat</strong></a>
             </div>
           </div>
           <div class="main-nav d-none d-lg-block">
@@ -240,7 +240,7 @@
           <div class="col-md-6 col-lg-4 mb-4 mb-lg-0">
 
             <div class="block-7">
-              <h3 class="footer-heading mb-4">About <strong class="text-primary">Farma</strong>T</h3>
+              <h3 class="footer-heading mb-4">About <strong class="text-primary">FarmaT</strong></h3>
               <p>En nuestra farmacia en línea, nos dedicamos a ofrecerte productos farmacéuticos de alta calidad y servicios confiables para cuidar de tu salud y bienestar. Con un amplio catálogo de medicamentos, productos de cuidado personal y atención al cliente excepcional, 
                 estamos aquí para ser tu aliado en el camino hacia una vida más saludable.</p>
             </div>
